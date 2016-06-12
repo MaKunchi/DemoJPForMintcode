@@ -1,0 +1,214 @@
+/*mintcode-iconfont*/
+@font-face {font-family: "iconfont";
+  src: url('../iconfont/iconfont.eot'); /* IE9*/
+  src: url('../iconfont/iconfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('../iconfont/iconfont.woff') format('woff'), /* chrome, firefox */
+  url('../iconfont/iconfont.ttf') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
+  url('../iconfont/iconfont.svg#iconfont') format('svg'); /* iOS 4.1- */
+}
+.iconfont {
+  font-family:"iconfont" !important;
+  font-size:16px;
+  font-style:normal;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-stroke-width: 0.2px;
+  -moz-osx-font-smoothing: grayscale;
+}
+/*导航条*/
+.m-navbar-brand{
+	padding: 0px;
+	margin:0px !important;
+}
+.m-navbar .navbar-nav>li{
+	font-size: 16px;
+	margin:0 20px;
+}
+.navbar-mint>div{
+	position: relative;
+	top:20px;
+}
+.navbar{
+	border:none;
+}
+/*当屏幕小于768px时*/
+@media screen and (max-width: 767px){
+	.navbar-mint>div{
+	top:0px;
+}
+	.m-navbar-brand{
+		display: none;
+	}
+	.m-navbar .navbar-nav > li{
+		text-align: center;
+		border-bottom: thin solid #ebebeb;
+		background-color:#f2f2f2;
+		margin:0px !important;
+		font-size: 26px;
+		line-height: 30px;
+		height:79px;
+	}
+	.m-navbar .navbar-nav > li>a{
+		position: relative;
+		top:27px;
+	}
+	.navbar-nav{
+		margin-top: 0px !important;
+	}
+	.navbar-header{
+		position: relative;
+		top:15px;
+	}
+	.navbar-header>.navbar-toggle{
+		border:none;
+		margin-top: 0px;
+		margin-bottom: 0px;
+		cursor: pointer;
+	}
+	.navbar-header>.navbar-toggle>i{
+		font-size: 30px;
+		color: #848484;
+	}
+	.navbar-header>i{
+		font-size: 30px;
+		color: #848484;
+	}
+	.mo-h{
+		position: absolute;
+		left:50%;
+		top:5px;
+		font-size: 24px;
+		margin-left:-65px;
+		letter-spacing: 3px;
+	}
+	.mo-logo{
+		position: absolute;
+		left: 0px;
+	}
+}
+/*当屏幕大于768px时*/
+@media screen and (min-width: 767px){
+	.navbar-nav{
+		float: right;
+	}
+/*添加空元素，并为其设置相关样式*/
+.navbar-nav li::after{
+	background-color: #54b74a;
+	bottom: -3px;
+	content:"";
+	height: 3px;
+	left:50%;
+	position: absolute;
+	transition: all 0.25s ease 0s;
+	width:0;
+}
+/*hover时，显示空元素*/
+.navbar-nav li:hover::after{
+	left:0;
+	width:100%;
+}
+.navbar-nav .active{
+	border-bottom: 3px solid #54b74a;
+	font-weight: bold;
+}
+}
+
+/*自定义navbar-mint，开始*/
+.navbar-mint {
+  background-color: #ffffff;
+  height: 80px;
+  margin-bottom: 0px;
+  border-bottom: thin solid #e7e7e7;
+}
+.navbar-mint .navbar-brand {
+  color: #777;
+}
+.navbar-mint .navbar-brand:hover,
+.navbar-mint .navbar-brand:focus {
+  color: #5e5e5e;
+  background-color: transparent;
+}
+.navbar-mint .navbar-text {
+  color: #777;
+}
+.navbar-mint .navbar-nav > li > a {
+  color: #848484;
+}
+.navbar-mint .navbar-nav > li > a:hover,
+.navbar-mint .navbar-nav > li > a:focus {
+  color: #54b74a;
+  background-color: transparent;
+}
+.navbar-mint .navbar-nav > .active > a,
+.navbar-mint .navbar-nav > .active > a:hover,
+.navbar-mint .navbar-nav > .active > a:focus {
+  color: #54b74a;
+  font-weight: bold;
+}
+.navbar-mint .navbar-nav > .disabled > a,
+.navbar-mint .navbar-nav > .disabled > a:hover,
+.navbar-mint .navbar-nav > .disabled > a:focus {
+  color: #ccc;
+  background-color: transparent;
+}
+/* .navbar-mint .navbar-toggle {
+  border-color: #ddd;
+} */
+.navbar-mint .navbar-toggle:hover,
+.navbar-mint .navbar-toggle:focus {
+  background-color: #ddd;
+}
+.navbar-mint .navbar-toggle .icon-bar {
+  background-color: #888;
+}
+.navbar-mint .navbar-collapse,
+.navbar-mint .navbar-form {
+  border-color: #e7e7e7;
+}
+.navbar-mint .navbar-nav > .open > a,
+.navbar-mint .navbar-nav > .open > a:hover,
+.navbar-mint .navbar-nav > .open > a:focus {
+  color: #555;
+  background-color: #e7e7e7;
+}
+@media (max-width: 767px) {
+  .navbar-mint .navbar-nav .open .dropdown-menu > li > a {
+    color: #777;
+  }
+  .navbar-mint .navbar-nav .open .dropdown-menu > li > a:hover,
+  .navbar-mint .navbar-nav .open .dropdown-menu > li > a:focus {
+    color: #333;
+    background-color: transparent;
+  }
+  .navbar-mint .navbar-nav .open .dropdown-menu > .active > a,
+  .navbar-mint .navbar-nav .open .dropdown-menu > .active > a:hover,
+  .navbar-mint .navbar-nav .open .dropdown-menu > .active > a:focus {
+    color: #555;
+    background-color: #e7e7e7;
+  }
+  .navbar-mint .navbar-nav .open .dropdown-menu > .disabled > a,
+  .navbar-mint .navbar-nav .open .dropdown-menu > .disabled > a:hover,
+  .navbar-mint .navbar-nav .open .dropdown-menu > .disabled > a:focus {
+    color: #ccc;
+    background-color: transparent;
+  }
+}
+.navbar-mint .navbar-link {
+  color: #777;
+}
+.navbar-mint .navbar-link:hover {
+  color: #333;
+}
+.navbar-mint .btn-link {
+  color: #777;
+}
+.navbar-mint .btn-link:hover,
+.navbar-mint .btn-link:focus {
+  color: #333;
+}
+.navbar-mint .btn-link[disabled]:hover,
+fieldset[disabled] .navbar-mint .btn-link:hover,
+.navbar-mint .btn-link[disabled]:focus,
+fieldset[disabled] .navbar-mint .btn-link:focus {
+  color: #ccc;
+}
+/*自定义navbar-mint，结束*/
